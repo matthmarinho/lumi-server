@@ -24,6 +24,7 @@ model EnergyInvoice {
   compensatedEnergyQuantity  Float?
   compensatedEnergyValue     Float?
   publicLightingContribution Float?
+  pdfData                    Bytes
   createdAt                  DateTime @default(now())
   updatedAt                  DateTime @updatedAt
 

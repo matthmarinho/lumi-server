@@ -18,6 +18,7 @@ export const create = async (req: Request, res: Response) => {
       compensatedEnergyQuantity: req.body.compensatedEnergyQuantity,
       compensatedEnergyValue: req.body.compensatedEnergyValue,
       publicLightingContribution: req.body.publicLightingContribution,
+      pdfData: req.body.pdfData,
     });
 
     res.status(201).json({
@@ -56,6 +57,7 @@ export const update = async (req: Request, res: Response) => {
         compensatedEnergyQuantity: req.body.compensatedEnergyQuantity,
         compensatedEnergyValue: req.body.compensatedEnergyValue,
         publicLightingContribution: req.body.publicLightingContribution,
+        pdfData: req.body.pdfData,
       },
       id
     );

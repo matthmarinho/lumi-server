@@ -14,6 +14,7 @@ export const createEnergyInvoice = async (data: Prisma.EnergyInvoiceCreateInput)
       compensatedEnergyQuantity: data.compensatedEnergyQuantity,
       compensatedEnergyValue: data.compensatedEnergyValue,
       publicLightingContribution: data.publicLightingContribution,
+      pdfData: data.pdfData,
     },
   });
 
@@ -42,6 +43,7 @@ export const updateEnergyInvoice = async (
       compensatedEnergyQuantity: data.compensatedEnergyQuantity,
       compensatedEnergyValue: data.compensatedEnergyValue,
       publicLightingContribution: data.publicLightingContribution,
+      pdfData: data.pdfData,
     },
   });
 
