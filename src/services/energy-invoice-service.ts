@@ -74,7 +74,7 @@ export const getEnergyInvoicesLibrary = async () => {
   const invoices = energyInvoices.reduce((acc, invoice) => {
     const { customerNumber, customerName, referenceMonth, referenceYear, pdfData } = invoice;
 
-    let customer = acc.find((item) => item.customerNumber === customerNumber);
+    let customer = acc.find((item) => item.customerNumber === customerNumber && item.referenceYear === referenceYear);
 
     if (!customer) {
       customer = { customerNumber, customerName, referenceYear, pdfFiles: [] };
