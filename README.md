@@ -17,7 +17,7 @@ Antes de iniciar o Lumi Server, certifique-se de ter instalado em seu ambiente:
 #### Clone o projeto
 
 ```bash
-  git clone https://github.com/matthmarinho/lumi-server
+  git clone https://github.com/matthmarinho/lumi-server.git
 ```
 
 #### Entre no diretório do projeto
