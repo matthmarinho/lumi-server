@@ -16,7 +16,9 @@ datasource db {
 model EnergyInvoice {
   id                         String   @id @default(cuid())
   customerNumber             String
+  customerName               String?
   referenceMonth             String
+  referenceYear              String
   electricEnergyQuantity     Float?
   electricEnergyValue        Float?
   sceeeEnergyQuantity        Float?
@@ -24,6 +26,7 @@ model EnergyInvoice {
   compensatedEnergyQuantity  Float?
   compensatedEnergyValue     Float?
   publicLightingContribution Float?
+  total                      Float?
   pdfData                    Bytes
   createdAt                  DateTime @default(now())
   updatedAt                  DateTime @updatedAt

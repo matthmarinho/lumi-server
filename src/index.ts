@@ -14,6 +14,10 @@ app.use((_req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
   next();
 });
+app.use((_req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://lumi-server.fly.dev");
+  next();
+});
 
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);

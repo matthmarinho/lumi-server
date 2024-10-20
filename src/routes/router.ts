@@ -7,6 +7,8 @@ import {
   show,
   update,
   remove,
+  showLibrary,
+  showDashboard,
 } from "../controllers/energy-invoice-controller";
 import { uploadPDF } from '../controllers/pdf-controller';
 
@@ -20,10 +22,12 @@ if (!fs.existsSync(uploadFolder)) {
 
 const upload = multer({ dest: uploadFolder });
 
-router.post("/energyInvoices", create);
-router.get("/energyInvoices", show);
-router.put("/energyInvoices/:id", update);
-router.delete("/energyInvoices/:id", remove);
+router.post("/energy-invoices", create);
+router.get("/energy-invoices", show);
+router.put("/energy-invoices/:id", update);
+router.delete("/energy-invoices/:id", remove);
 router.post('/upload-pdf', upload.single('pdf'), uploadPDF);
+router.get('/library', showLibrary);
+router.get('/dashboard', showDashboard);
 
 export default router;

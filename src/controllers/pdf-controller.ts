@@ -14,9 +14,11 @@ export async function uploadPDF(req: Request, res: Response): Promise<void> {
 
     removeTempFile(filePath);
 
-    res.status(201).json({ message: 'Fatura de energia salva com sucesso!', data: savedInvoice});
-  } catch (error) {
-    console.error('Erro ao processar o PDF:', error);
-    res.status(500).json({ error: 'Erro ao processar e salvar a fatura de energia' });
+    res.status(201).json({ 
+      message: 'Fatura de energia salva com sucesso!', 
+      data: savedInvoice
+    });
+  } catch (e) {
+    res.status(500).json({ e: 'Erro ao processar e salvar a fatura de energia' });
   }
 }
